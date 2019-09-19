@@ -5,6 +5,10 @@ namespace Mangati\Cachet\Entity;
 use DateTime;
 use JMS\Serializer\Annotation as JMS;
 
+/**
+ * Class Incident
+ * @package Mangati\Cachet\Entity
+ */
 class Incident extends Entity
 {
 
@@ -147,11 +151,15 @@ class Incident extends Entity
     }
 
     /**
-     * @return int
+     * @param $status
+     *
+     * @return self
      */
     public function setComponentStatus($status)
     {
         $this->componentStatus = $status;
+
+        return $this;
     }
 
     /**

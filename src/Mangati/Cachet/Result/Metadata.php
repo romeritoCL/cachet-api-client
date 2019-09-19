@@ -4,6 +4,10 @@ namespace Mangati\Cachet\Result;
 
 use JMS\Serializer\Annotation as JMS;
 
+/**
+ * Class Metadata
+ * @package Mangati\Cachet\Result
+ */
 class Metadata
 {
 

@@ -5,9 +5,12 @@ namespace Mangati\Cachet\Result\Incident;
 use Mangati\Cachet\Result\EnvelopeCollection;
 use JMS\Serializer\Annotation as JMS;
 
+/**
+ * Class IncidentsEnvelope
+ * @package Mangati\Cachet\Result\Incident
+ */
 class IncidentsEnvelope extends EnvelopeCollection
 {
-
     /**
      * @var array
      * @JMS\Type("array<Mangati\Cachet\Entity\Incident>")

@@ -3,13 +3,13 @@
 namespace Mangati\Cachet\Result\Incident;
 
 use Mangati\Cachet\Result\Envelope;
+use Mangati\Cachet\Entity\Incident;
 use JMS\Serializer\Annotation as JMS;
 
 class IncidentEnvelope implements Envelope
 {
-
     /**
-     * @var Mangati\Cachet\Entity\Incident
+     * @var Incident
      * @JMS\Type("Mangati\Cachet\Entity\Incident")
      */
     private $data;

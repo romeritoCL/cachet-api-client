@@ -4,6 +4,10 @@ namespace Mangati\Cachet\Entity;
 
 use JMS\Serializer\Annotation as JMS;
 
+/**
+ * Class Component
+ * @package Mangati\Cachet\Entity
+ */
 class Component extends Entity
 {
     const STATUS_OPERATIONAL        = 1;
@@ -182,7 +186,7 @@ class Component extends Entity
     /**
      * Get the value of Group
      *
-     * @return Group
+     * @return Group | int
      */
     public function getGroup()
     {

@@ -1,18 +1,23 @@
 <?php
 
-namespace Mangati\Cachet;
+namespace Tests\Mangati\Cachet;
 
 use Mangati\Cachet\Entity\Component;
 
 /**
- * ComponentsTest
- *
- * @author Rogério Lino <rogeriolino@gmail.com>
+ * Class ComponentsTest
+ * @package Tests\Mangati\Cachet
  */
 class ComponentsTest extends AbstractTest
 {
+    /**
+     * @var $id
+     */
     private $id;
 
+    /**
+     * testGetAll
+     */
     public function testGetAll()
     {
         $result = $this->client->getComponents();
@@ -20,6 +25,9 @@ class ComponentsTest extends AbstractTest
         $this->assertTrue(is_array($result));
     }
 
+    /**
+     * testGetOne
+     */
     public function testGetOne()
     {
         $result = $this->client->getComponent(1);
@@ -28,6 +36,9 @@ class ComponentsTest extends AbstractTest
         $this->assertEquals(1, $result->getId());
     }
 
+    /**
+     * testPost
+     */
     public function testPost()
     {
         $component = new Component();
@@ -45,11 +56,14 @@ class ComponentsTest extends AbstractTest
         $this->id = $result->getId();
     }
 
+    /**
+     * testPut
+     */
     public function testPut()
     {
         if ($this->id) {
             $component = new Component();
-            $incident->setId($this->id);
+            $component->setId($this->id);
             $component->setName('Testing my client (updated)');
             $component->setDescription('mangati/cachet Cachet client');
             $component->setLink('https://github.com/mangati/cachet');
@@ -63,6 +77,9 @@ class ComponentsTest extends AbstractTest
         }
     }
 
+    /**
+     * testDelete
+     */
     public function testDelete()
     {
         if ($this->id) {

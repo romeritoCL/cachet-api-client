@@ -2,6 +2,8 @@
 
 namespace Mangati\Cachet;
 
+use JMS\Serializer\SerializerBuilder;
+use Mangati\Cachet\Entity\Metric;
 use Mangati\Cachet\Result\Generic\StringEnvelope;
 use Mangati\Cachet\Entity\Component;
 use Mangati\Cachet\Result\Component\ComponentEnvelope;
@@ -13,10 +15,16 @@ use Mangati\Cachet\Entity\Group;
 use Mangati\Cachet\Result\Group\GroupEnvelope;
 use Mangati\Cachet\Result\Group\GroupsEnvelope;
 use Mangati\Cachet\Http\RequestHandler;
+use Mangati\Cachet\Result\Metric\MetricEnvelope;
+use Mangati\Cachet\Result\Metric\MetricsEnvelope;
+use GuzzleHttp\Exception\GuzzleException;
 
+/**
+ * Class Client
+ * @package Mangati\Cachet
+ */
 class Client
 {
-
     /**
      * @var string
      */
@@ -32,12 +40,18 @@ class Client
      */
     private $handler;
 
+    /**
+     * Client constructor.
+     *
+     * @param      $endpoint
+     * @param null $token
+     */
     public function __construct($endpoint, $token = null)
     {
         $this->endpoint = $endpoint;
         $this->token = $token;
 
-        $serializer = \JMS\Serializer\SerializerBuilder::create()->build();
+        $serializer = SerializerBuilder::create()->build();
         $this->handler = new RequestHandler($this, $serializer);
     }
 
@@ -62,7 +76,8 @@ class Client
     }
 
     /**
-     * @return Component[]
+     * @return mixed
+     * @throws GuzzleException
      */
     public function ping()
     {
@@ -72,7 +87,10 @@ class Client
     }
 
     /**
+     * @param array $params
+     *
      * @return Component[]
+     * @throws GuzzleException
      */
     public function getComponents(array $params = [])
     {
@@ -82,8 +100,10 @@ class Client
     }
 
     /**
-     * @param int $id
+     * @param $id
+     *
      * @return Component
+     * @throws GuzzleException
      */
     public function getComponent($id)
     {
@@ -94,7 +114,9 @@ class Client
 
     /**
      * @param Component $component
+     *
      * @return Component
+     * @throws GuzzleException
      */
     public function addComponent(Component $component)
     {
@@ -105,7 +127,9 @@ class Client
 
     /**
      * @param Component $component
+     *
      * @return Component
+     * @throws GuzzleException
      */
     public function updateComponent(Component $component)
     {
@@ -115,7 +139,10 @@ class Client
     }
 
     /**
-     * @param Component $component
+     * @param $id
+     *
+     * @return bool
+     * @throws GuzzleException
      */
     public function deleteComponent($id)
     {
@@ -125,7 +152,10 @@ class Client
     }
 
     /**
+     * @param array $params
+     *
      * @return Incident[]
+     * @throws GuzzleException
      */
     public function getIncidents(array $params = [])
     {
@@ -136,7 +166,9 @@ class Client
 
     /**
      * @param int $id
+     *
      * @return Incident
+     * @throws GuzzleException
      */
     public function getIncident($id)
     {
@@ -147,7 +179,9 @@ class Client
 
     /**
      * @param Incident $incident
+     *
      * @return Incident
+     * @throws GuzzleException
      */
     public function addIncident(Incident $incident)
     {
@@ -158,7 +192,9 @@ class Client
 
     /**
      * @param Incident $incident
+     *
      * @return Incident
+     * @throws GuzzleException
      */
     public function updateIncident(Incident $incident)
     {
@@ -168,7 +204,10 @@ class Client
     }
 
     /**
-     * @param Incident $incident
+     * @param $id
+     *
+     * @return bool
+     * @throws GuzzleException
      */
     public function deleteIncident($id)
     {
@@ -178,7 +217,10 @@ class Client
     }
 
     /**
+     * @param array $params
+     *
      * @return Group[]
+     * @throws GuzzleException
      */
     public function getGroups(array $params = [])
     {
@@ -189,12 +231,79 @@ class Client
 
     /**
      * @param int $id
+     *
      * @return Component
+     * @throws GuzzleException
      */
     public function getGroup($id)
     {
         $envelope = $this->handler->get('components/groups/' . $id, GroupEnvelope::class);
 
         return $envelope->getData();
+    }
+
+    /**
+     * @param array $params
+     *
+     * @return Metric[]
+     * @throws GuzzleException
+     */
+    public function getMetrics(array $params = [])
+    {
+        $envelope = $this->handler->get('metrics', MetricsEnvelope::class, $params);
+
+        return $envelope->getData();
+    }
+
+    /**
+     * @param int $id
+     *
+     * @return Metric
+     * @throws GuzzleException
+     */
+    public function getMetric($id)
+    {
+        $envelope = $this->handler->get('metrics/' . $id, MetricEnvelope::class);
+
+        return $envelope->getData();
+    }
+
+    /**
+     * @param Metric $metric
+     *
+     * @return Metric
+     * @throws GuzzleException
+     */
+    public function addMetric(Metric $metric)
+    {
+        $envelope = $this->handler->post('metrics', MetricEnvelope::class, $metric);
+
+        return $envelope->getData();
+    }
+
+    /**
+     * @param Metric $metric
+     *
+     * @return Metric
+     * @throws GuzzleException
+     */
+    public function updateMetric(Metric $metric)
+    {
+        $envelope = $this->handler->put('metrics/' . $metric->getId(), MetricEnvelope::class, $metric);
+
+        return $envelope->getData();
+    }
+
+    /**
+     * @param $id
+     *
+     * @return bool
+     * @throws GuzzleException
+     */
+    public function deleteMetric($id)
+    {
+        $this->handler->delete('metrics/' . $id, $id);
+
+        return true;
     }
 }

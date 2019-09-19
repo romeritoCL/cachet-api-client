@@ -4,6 +4,10 @@ namespace Mangati\Cachet\Result;
 
 use JMS\Serializer\Annotation as JMS;
 
+/**
+ * Interface Envelope
+ * @package Mangati\Cachet\Result
+ */
 interface Envelope
 {
 

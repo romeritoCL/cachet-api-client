@@ -5,6 +5,10 @@ namespace Mangati\Cachet\Result\Component;
 use Mangati\Cachet\Result\EnvelopeCollection;
 use JMS\Serializer\Annotation as JMS;
 
+/**
+ * Class ComponentsEnvelope
+ * @package Mangati\Cachet\Result\Component
+ */
 class ComponentsEnvelope extends EnvelopeCollection
 {
 

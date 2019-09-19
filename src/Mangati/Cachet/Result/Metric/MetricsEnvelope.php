@@ -1,21 +1,20 @@
 <?php
 
-namespace Mangati\Cachet\Result\Component;
+namespace Mangati\Cachet\Result\Metric;
 
-use Mangati\Cachet\Result\Envelope;
-use Mangati\Cachet\Entity\Component;
+use Mangati\Cachet\Result\EnvelopeCollection;
 use JMS\Serializer\Annotation as JMS;
 
 /**
- * Class ComponentEnvelope
- * @package Mangati\Cachet\Result\Component
+ * Class MetricsEnvelope
+ * @package Mangati\Cachet\Result\Metric
  */
-class ComponentEnvelope implements Envelope
+class MetricsEnvelope extends EnvelopeCollection
 {
 
     /**
-     * @var Component
-     * @JMS\Type("Mangati\Cachet\Entity\Component")
+     * @var array
+     * @JMS\Type("array<Mangati\Cachet\Entity\Metric>")
      */
     private $data;
 

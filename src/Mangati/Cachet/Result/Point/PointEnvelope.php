@@ -1,21 +1,21 @@
 <?php
 
-namespace Mangati\Cachet\Result\Component;
+namespace Mangati\Cachet\Result\Point;
 
 use Mangati\Cachet\Result\Envelope;
-use Mangati\Cachet\Entity\Component;
+use Mangati\Cachet\Entity\Point;
 use JMS\Serializer\Annotation as JMS;
 
 /**
- * Class ComponentEnvelope
- * @package Mangati\Cachet\Result\Component
+ * Class PointEnvelope
+ * @package Mangati\Cachet\Result\Point
  */
-class ComponentEnvelope implements Envelope
+class PointEnvelope implements Envelope
 {
 
     /**
-     * @var Component
-     * @JMS\Type("Mangati\Cachet\Entity\Component")
+     * @var Point
+     * @JMS\Type("Mangati\Cachet\Entity\Point")
      */
     private $data;
 

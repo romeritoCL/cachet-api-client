@@ -1,18 +1,23 @@
 <?php
 
-namespace Mangati\Cachet;
+namespace Tests\Mangati\Cachet;
 
 use Mangati\Cachet\Entity\Incident;
 
 /**
- * IncidentsTest
- *
- * @author Rogério Lino <rogeriolino@gmail.com>
+ * Class IncidentsTest
+ * @package Tests\Mangati\Cachet
  */
 class IncidentsTest extends AbstractTest
 {
+    /**
+     * @var $id
+     */
     private $id;
 
+    /**
+     * testGetAll
+     */
     public function testGetAll()
     {
         $result = $this->client->getIncidents();
@@ -20,6 +25,9 @@ class IncidentsTest extends AbstractTest
         $this->assertTrue(is_array($result));
     }
 
+    /**
+     * testGetOne
+     */
     public function testGetOne()
     {
         $result = $this->client->getIncident(1);
@@ -28,6 +36,9 @@ class IncidentsTest extends AbstractTest
         $this->assertEquals(1, $result->getId());
     }
 
+    /**
+     * testPost
+     */
     public function testPost()
     {
         $incident = new Incident();
@@ -44,6 +55,9 @@ class IncidentsTest extends AbstractTest
         $this->id = $result->getId();
     }
 
+    /**
+     * testPut
+     */
     public function testPut()
     {
         if ($this->id) {
@@ -62,6 +76,9 @@ class IncidentsTest extends AbstractTest
         }
     }
 
+    /**
+     * testDelete
+     */
     public function testDelete()
     {
         if ($this->id) {

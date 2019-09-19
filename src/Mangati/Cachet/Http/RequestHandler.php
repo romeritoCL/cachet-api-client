@@ -6,7 +6,13 @@ use Mangati\Cachet\Client;
 use Mangati\Cachet\Entity\Entity;
 use Mangati\Cachet\Result\Envelope;
 use JMS\Serializer\Serializer;
+use GuzzleHttp\Exception\GuzzleException;
+use Psr\Http\Message\ResponseInterface;
 
+/**
+ * Class RequestHandler
+ * @package Mangati\Cachet\Http
+ */
 class RequestHandler
 {
     /**
@@ -24,6 +30,12 @@ class RequestHandler
      */
     protected $serializer;
 
+    /**
+     * RequestHandler constructor.
+     *
+     * @param Client     $client
+     * @param Serializer $serializer
+     */
     public function __construct(Client $client, Serializer $serializer)
     {
         $this->client = new \GuzzleHttp\Client([
@@ -39,9 +51,12 @@ class RequestHandler
     }
 
     /**
+     * @param ResponseInterface $response
+     * @param $envelopeType
+     *
      * @return Envelope
      */
-    private function parseResponse($response, $envelopeType)
+    private function parseResponse(ResponseInterface $response, $envelopeType)
     {
         $json = $response->getBody();
         $envelope = $this->serializer->deserialize($json, $envelopeType, 'json');
@@ -49,6 +64,14 @@ class RequestHandler
         return $envelope;
     }
 
+    /**
+     * @param       $method
+     * @param       $url
+     * @param array $params
+     *
+     * @return ResponseInterface
+     * @throws GuzzleException
+     */
     public function request($method, $url, array $params = [])
     {
         $params = array_merge($params, [
@@ -58,7 +81,12 @@ class RequestHandler
     }
 
     /**
+     * @param       $path
+     * @param       $envelopeType
+     * @param array $params
+     *
      * @return Envelope
+     * @throws GuzzleException
      */
     public function get($path, $envelopeType, array $params = [])
     {
@@ -71,7 +99,12 @@ class RequestHandler
     }
 
     /**
+     * @param        $path
+     * @param        $envelopeType
+     * @param Entity $entity
+     *
      * @return Envelope
+     * @throws GuzzleException
      */
     public function put($path, $envelopeType, Entity $entity)
     {
@@ -86,7 +119,12 @@ class RequestHandler
     }
 
     /**
+     * @param        $path
+     * @param        $envelopeType
+     * @param Entity $entity
+     *
      * @return Envelope
+     * @throws GuzzleException
      */
     public function post($path, $envelopeType, Entity $entity)
     {
@@ -101,7 +139,10 @@ class RequestHandler
     }
 
     /**
+     * @param $path
+     * @param $id
      *
+     * @throws GuzzleException
      */
     public function delete($path, $id)
     {
@@ -111,5 +152,4 @@ class RequestHandler
             ]
         ]);
     }
-
 }

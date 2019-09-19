@@ -4,6 +4,10 @@ namespace Mangati\Cachet\Result;
 
 use JMS\Serializer\Annotation as JMS;
 
+/**
+ * Class EnvelopeCollection
+ * @package Mangati\Cachet\Result
+ */
 abstract class EnvelopeCollection implements Envelope
 {
 

@@ -5,9 +5,12 @@ namespace Mangati\Cachet\Result\Group;
 use Mangati\Cachet\Result\EnvelopeCollection;
 use JMS\Serializer\Annotation as JMS;
 
+/**
+ * Class GroupsEnvelope
+ * @package Mangati\Cachet\Result\Group
+ */
 class GroupsEnvelope extends EnvelopeCollection
 {
-
     /**
      * @var array
      * @JMS\Type("array<Mangati\Cachet\Entity\Group>")

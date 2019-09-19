@@ -1,14 +1,16 @@
 <?php
 
-namespace Mangati\Cachet;
+namespace Tests\Mangati\Cachet;
 
 /**
- * ClientTest
- *
- * @author Rogério Lino <rogeriolino@gmail.com>
+ * Class ClientTest
+ * @package Tests\Mangati\Cachet
  */
 class ClientTest extends AbstractTest
 {
+    /**
+     * testPing
+     */
     public function testPing()
     {
         $result = $this->client->ping();

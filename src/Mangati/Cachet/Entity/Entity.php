@@ -5,11 +5,15 @@ namespace Mangati\Cachet\Entity;
 use DateTime;
 use JMS\Serializer\Annotation as JMS;
 
+/**
+ * Class Entity
+ * @package Mangati\Cachet\Entity
+ */
 abstract class Entity
 {
     /**
      * @var int
-     * @JMS\Type("integer")
+     * @JMS\Type("Integer")
      */
     private $id;
 
@@ -72,7 +76,7 @@ abstract class Entity
     /**
      * Set the value of Created At
      *
-     * @param DateTime createdAt
+     * @param DateTime|null $createdAt
      *
      * @return self
      */
@@ -96,7 +100,7 @@ abstract class Entity
     /**
      * Set the value of Updated At
      *
-     * @param DateTime updatedAt
+     * @param DateTime|null $updatedAt
      *
      * @return self
      */
@@ -120,7 +124,7 @@ abstract class Entity
     /**
      * Set the value of Deleted At
      *
-     * @param DateTime deletedAt
+     * @param DateTime|null $deletedAt
      *
      * @return self
      */
@@ -130,5 +134,4 @@ abstract class Entity
 
         return $this;
     }
-
 }

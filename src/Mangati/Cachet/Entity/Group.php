@@ -4,6 +4,10 @@ namespace Mangati\Cachet\Entity;
 
 use JMS\Serializer\Annotation as JMS;
 
+/**
+ * Class Group
+ * @package Mangati\Cachet\Entity
+ */
 class Group extends Entity
 {
     /**
@@ -95,4 +99,4 @@ class Group extends Entity
 
         return $this;
     }
- }
+}

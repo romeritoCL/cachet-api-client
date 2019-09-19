@@ -3,13 +3,18 @@
 namespace Mangati\Cachet\Result\Group;
 
 use Mangati\Cachet\Result\Envelope;
+use Mangati\Cachet\Entity\Group;
 use JMS\Serializer\Annotation as JMS;
 
+/**
+ * Class GroupEnvelope
+ * @package Mangati\Cachet\Result\Group
+ */
 class GroupEnvelope implements Envelope
 {
 
     /**
-     * @var Mangati\Cachet\Entity\Group
+     * @var Group
      * @JMS\Type("Mangati\Cachet\Entity\Group")
      */
     private $data;

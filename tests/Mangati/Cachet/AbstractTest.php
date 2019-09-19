@@ -22,6 +22,6 @@ abstract class AbstractTest extends PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->client = new Client('https://status.devoralive.com/api/v1/', 'TfWX9mbiDIIwklRY0AH3');
+        $this->client = new Client('https://demo.cachethq.io/api/v1/', '9yMHsdioQosnyVK4iCVR');
     }
 }

@@ -1,19 +1,19 @@
 <?php
 
-namespace Devoralive\Result;
+namespace DevoraliveCachet\Result;
 
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class EnvelopeCollection
- * @package Devoralive\Result
+ * @package DevoraliveCachet\Result
  */
 abstract class EnvelopeCollection implements Envelope
 {
 
     /**
      * @var Metadata
-     * @JMS\Type("Devoralive\Result\Metadata")
+     * @JMS\Type("DevoraliveCachet\Result\Metadata")
      */
     private $meta;
 

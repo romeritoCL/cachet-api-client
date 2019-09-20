@@ -1,20 +1,20 @@
 <?php
 
-namespace Devoralive\Result\Component;
+namespace DevoraliveCachet\Result\Component;
 
-use Devoralive\Result\EnvelopeCollection;
+use DevoraliveCachet\Result\EnvelopeCollection;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class ComponentsEnvelope
- * @package Devoralive\Result\Component
+ * @package DevoraliveCachet\Result\Component
  */
 class ComponentsEnvelope extends EnvelopeCollection
 {
 
     /**
      * @var array
-     * @JMS\Type("array<Devoralive\Entity\Component>")
+     * @JMS\Type("array<DevoraliveCachet\Entity\Component>")
      */
     private $data;
 

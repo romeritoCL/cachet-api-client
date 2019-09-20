@@ -1,19 +1,19 @@
 <?php
 
-namespace Devoralive\Result;
+namespace DevoraliveCachet\Result;
 
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class Metadata
- * @package Devoralive\Result
+ * @package DevoraliveCachet\Result
  */
 class Metadata
 {
 
     /**
      * @var Pagination
-     * @JMS\Type("Devoralive\Result\Pagination")
+     * @JMS\Type("DevoraliveCachet\Result\Pagination")
      */
     private $pagination;
 }

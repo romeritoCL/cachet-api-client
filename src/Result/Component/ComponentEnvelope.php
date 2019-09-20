@@ -1,21 +1,21 @@
 <?php
 
-namespace Devoralive\Result\Component;
+namespace DevoraliveCachet\Result\Component;
 
-use Devoralive\Result\Envelope;
-use Devoralive\Entity\Component;
+use DevoraliveCachet\Result\Envelope;
+use DevoraliveCachet\Entity\Component;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class ComponentEnvelope
- * @package Devoralive\Result\Component
+ * @package DevoraliveCachet\Result\Component
  */
 class ComponentEnvelope implements Envelope
 {
 
     /**
      * @var Component
-     * @JMS\Type("Devoralive\Entity\Component")
+     * @JMS\Type("DevoraliveCachet\Entity\Component")
      */
     private $data;
 

@@ -1,12 +1,12 @@
 <?php
 
-namespace Devoralive\Result;
+namespace DevoraliveCachet\Result;
 
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class Pagination
- * @package Devoralive\Result
+ * @package DevoraliveCachet\Result
  */
 class Pagination
 {

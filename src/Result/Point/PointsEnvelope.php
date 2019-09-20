@@ -1,20 +1,20 @@
 <?php
 
-namespace Devoralive\Result\Point;
+namespace DevoraliveCachet\Result\Point;
 
-use Devoralive\Result\EnvelopeCollection;
+use DevoraliveCachet\Result\EnvelopeCollection;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class PointsEnvelope
- * @package Devoralive\Result\Point
+ * @package DevoraliveCachet\Result\Point
  */
 class PointsEnvelope extends EnvelopeCollection
 {
 
     /**
      * @var array
-     * @JMS\Type("array<Devoralive\Entity\Point>")
+     * @JMS\Type("array<DevoraliveCachet\Entity\Point>")
      */
     private $data;
 

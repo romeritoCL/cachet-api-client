@@ -1,16 +1,16 @@
 <?php
 
-namespace Devoralive\Result\Incident;
+namespace DevoraliveCachet\Result\Incident;
 
-use Devoralive\Result\Envelope;
-use Devoralive\Entity\Incident;
+use DevoraliveCachet\Result\Envelope;
+use DevoraliveCachet\Entity\Incident;
 use JMS\Serializer\Annotation as JMS;
 
 class IncidentEnvelope implements Envelope
 {
     /**
      * @var Incident
-     * @JMS\Type("Devoralive\Entity\Incident")
+     * @JMS\Type("DevoraliveCachet\Entity\Incident")
      */
     private $data;
 

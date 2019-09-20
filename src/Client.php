@@ -1,27 +1,27 @@
 <?php
 
-namespace Devoralive;
+namespace DevoraliveCachet;
 
 use JMS\Serializer\SerializerBuilder;
-use Devoralive\Entity\Metric;
-use Devoralive\Result\Generic\StringEnvelope;
-use Devoralive\Entity\Component;
-use Devoralive\Result\Component\ComponentEnvelope;
-use Devoralive\Result\Component\ComponentsEnvelope;
-use Devoralive\Entity\Incident;
-use Devoralive\Result\Incident\IncidentEnvelope;
-use Devoralive\Result\Incident\IncidentsEnvelope;
-use Devoralive\Entity\Group;
-use Devoralive\Result\Group\GroupEnvelope;
-use Devoralive\Result\Group\GroupsEnvelope;
-use Devoralive\Http\RequestHandler;
-use Devoralive\Result\Metric\MetricEnvelope;
-use Devoralive\Result\Metric\MetricsEnvelope;
+use DevoraliveCachet\Entity\Metric;
+use DevoraliveCachet\Result\Generic\StringEnvelope;
+use DevoraliveCachet\Entity\Component;
+use DevoraliveCachet\Result\Component\ComponentEnvelope;
+use DevoraliveCachet\Result\Component\ComponentsEnvelope;
+use DevoraliveCachet\Entity\Incident;
+use DevoraliveCachet\Result\Incident\IncidentEnvelope;
+use DevoraliveCachet\Result\Incident\IncidentsEnvelope;
+use DevoraliveCachet\Entity\Group;
+use DevoraliveCachet\Result\Group\GroupEnvelope;
+use DevoraliveCachet\Result\Group\GroupsEnvelope;
+use DevoraliveCachet\Http\RequestHandler;
+use DevoraliveCachet\Result\Metric\MetricEnvelope;
+use DevoraliveCachet\Result\Metric\MetricsEnvelope;
 use GuzzleHttp\Exception\GuzzleException;
 
 /**
  * Class Client
- * @package Devoralive
+ * @package DevoraliveCachet
  */
 class Client
 {

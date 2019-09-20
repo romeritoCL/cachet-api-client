@@ -1,12 +1,12 @@
 <?php
 
-namespace Devoralive\Entity;
+namespace DevoraliveCachet\Entity;
 
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class Component
- * @package Devoralive\Entity
+ * @package DevoraliveCachet\Entity
  */
 class Component extends Entity
 {

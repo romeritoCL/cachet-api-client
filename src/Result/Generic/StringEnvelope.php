@@ -1,8 +1,8 @@
 <?php
 
-namespace Devoralive\Result\Generic;
+namespace DevoraliveCachet\Result\Generic;
 
-use Devoralive\Result\Envelope;
+use DevoraliveCachet\Result\Envelope;
 use JMS\Serializer\Annotation as JMS;
 
 class StringEnvelope implements Envelope

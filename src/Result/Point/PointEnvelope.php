@@ -1,21 +1,21 @@
 <?php
 
-namespace Devoralive\Result\Point;
+namespace DevoraliveCachet\Result\Point;
 
-use Devoralive\Result\Envelope;
-use Devoralive\Entity\Point;
+use DevoraliveCachet\Result\Envelope;
+use DevoraliveCachet\Entity\Point;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class PointEnvelope
- * @package Devoralive\Result\Point
+ * @package DevoraliveCachet\Result\Point
  */
 class PointEnvelope implements Envelope
 {
 
     /**
      * @var Point
-     * @JMS\Type("Devoralive\Entity\Point")
+     * @JMS\Type("DevoraliveCachet\Entity\Point")
      */
     private $data;
 

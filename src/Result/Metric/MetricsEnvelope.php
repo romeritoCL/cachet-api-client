@@ -1,20 +1,20 @@
 <?php
 
-namespace Devoralive\Result\Metric;
+namespace DevoraliveCachet\Result\Metric;
 
-use Devoralive\Result\EnvelopeCollection;
+use DevoraliveCachet\Result\EnvelopeCollection;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class MetricsEnvelope
- * @package Devoralive\Result\Metric
+ * @package DevoraliveCachet\Result\Metric
  */
 class MetricsEnvelope extends EnvelopeCollection
 {
 
     /**
      * @var array
-     * @JMS\Type("array<Devoralive\Entity\Metric>")
+     * @JMS\Type("array<DevoraliveCachet\Entity\Metric>")
      */
     private $data;
 

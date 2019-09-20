@@ -1,18 +1,18 @@
 <?php
 
-namespace Devoralive\Http;
+namespace DevoraliveCachet\Http;
 
-use Devoralive\Client as Client;
+use DevoraliveCachet\Client as Client;
 use \GuzzleHttp\Client as GuzzleClient;
-use Devoralive\Entity\Entity;
-use Devoralive\Result\Envelope;
+use DevoraliveCachet\Entity\Entity;
+use DevoraliveCachet\Result\Envelope;
 use GuzzleHttp\Exception\GuzzleException;
 use JMS\Serializer\SerializerInterface;
 use Psr\Http\Message\ResponseInterface;
 
 /**
  * Class RequestHandler
- * @package Devoralive\Http
+ * @package DevoraliveCachet\Http
  */
 class RequestHandler
 {

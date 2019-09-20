@@ -1,19 +1,19 @@
 <?php
 
-namespace Devoralive\Result\Incident;
+namespace DevoraliveCachet\Result\Incident;
 
-use Devoralive\Result\EnvelopeCollection;
+use DevoraliveCachet\Result\EnvelopeCollection;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class IncidentsEnvelope
- * @package Devoralive\Result\Incident
+ * @package DevoraliveCachet\Result\Incident
  */
 class IncidentsEnvelope extends EnvelopeCollection
 {
     /**
      * @var array
-     * @JMS\Type("array<Devoralive\Entity\Incident>")
+     * @JMS\Type("array<DevoraliveCachet\Entity\Incident>")
      */
     private $data;
 

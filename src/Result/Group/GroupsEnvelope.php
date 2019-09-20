@@ -1,19 +1,19 @@
 <?php
 
-namespace Devoralive\Result\Group;
+namespace DevoraliveCachet\Result\Group;
 
-use Devoralive\Result\EnvelopeCollection;
+use DevoraliveCachet\Result\EnvelopeCollection;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class GroupsEnvelope
- * @package Devoralive\Result\Group
+ * @package DevoraliveCachet\Result\Group
  */
 class GroupsEnvelope extends EnvelopeCollection
 {
     /**
      * @var array
-     * @JMS\Type("array<Devoralive\Entity\Group>")
+     * @JMS\Type("array<DevoraliveCachet\Entity\Group>")
      */
     private $data;
 

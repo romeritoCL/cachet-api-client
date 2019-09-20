@@ -1,13 +1,13 @@
 <?php
 
-namespace Devoralive\Entity;
+namespace DevoraliveCachet\Entity;
 
 use DateTime;
 use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class Entity
- * @package Devoralive\Entity
+ * @package DevoraliveCachet\Entity
  */
 abstract class Entity
 {

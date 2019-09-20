@@ -1,10 +1,10 @@
 <?php
 
-namespace Devoralive\Result;
+namespace DevoraliveCachet\Result;
 
 /**
  * Interface Envelope
- * @package Devoralive\Result
+ * @package DevoraliveCachet\Result
  */
 interface Envelope
 {

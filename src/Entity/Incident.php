@@ -32,21 +32,21 @@ class Incident extends Entity
 
     /**
      * @var int
-     * @JMS\Type("integer")
+     * @JMS\Type("int")
      * @JMS\SerializedName("component_id")
      */
     private $component;
 
     /**
      * @var int
-     * @JMS\Type("integer")
+     * @JMS\Type("int")
      * @JMS\SerializedName("component_status")
      */
     private $componentStatus;
 
     /**
      * @var int
-     * @JMS\Type("integer")
+     * @JMS\Type("int")
      */
     private $status;
 
@@ -59,7 +59,7 @@ class Incident extends Entity
 
     /**
      * @var int
-     * @JMS\Type("integer")
+     * @JMS\Type("int")
      */
     private $visible;
 

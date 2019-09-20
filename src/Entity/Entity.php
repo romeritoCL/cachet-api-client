@@ -13,7 +13,7 @@ abstract class Entity
 {
     /**
      * @var int
-     * @JMS\Type("Integer")
+     * @JMS\Type("int")
      */
     private $id;
 

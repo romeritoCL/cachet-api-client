@@ -18,7 +18,7 @@ class Group extends Entity
 
     /**
      * @var int
-     * @JMS\Type("integer")
+     * @JMS\Type("int")
      */
     private $order;
 

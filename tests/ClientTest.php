@@ -3,6 +3,7 @@
 namespace Devoralive\CachetApiClient\Tests;
 
 use DevoraliveCachet\Client;
+use DevoraliveCachet\Entity\Incident;
 use PHPUnit\Framework\TestCase;
 use GuzzleHttp\Exception\GuzzleException;
 
@@ -34,7 +35,21 @@ class ClientTest extends TestCase
     public function testPing()
     {
         $result = $this->client->ping();
-
         $this->assertEquals('Pong!', $result);
+    }
+
+    /**
+     * testGetIncidents
+     *
+     * @throws GuzzleException
+     */
+    public function testGetIncidents()
+    {
+        $result = $this->client->getIncidents();
+        foreach ($result as $incident) {
+            $this->assertInstanceOf(Incident::class, $incident);
+            $this->assertInstanceOf(\DateTime::class, $incident->getCreatedAt());
+            $this->assertInstanceOf(\DateTime::class, $incident->getUpdatedAt());
+        }
     }
 }

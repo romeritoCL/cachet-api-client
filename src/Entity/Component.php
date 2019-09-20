@@ -35,19 +35,19 @@ class Component extends Entity
 
     /**
      * @var int
-     * @JMS\Type("integer")
+     * @JMS\Type("int")
      */
     private $status;
 
     /**
      * @var int
-     * @JMS\Type("integer")
+     * @JMS\Type("int")
      */
     private $order;
 
     /**
      * @var int
-     * @JMS\Type("integer")
+     * @JMS\Type("int")
      * @JMS\SerializedName("group_id")
      */
     private $group;

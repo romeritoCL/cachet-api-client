@@ -5,10 +5,10 @@
     "keywords": ["cachet", "client", "status", "cachethq"],
     "license": "MIT",
     "autoload": {
-        "psr-4": { "": "src/" }
+        "psr-4": { "Devoralive\\": "src/" }
     },
     "require": {
-        "php": ">=7.2",
+        "php": ">=7.0",
         "guzzlehttp/guzzle": "~6.0",
         "jms/serializer": "^3"
     }

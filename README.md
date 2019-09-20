@@ -1,6 +1,6 @@
 # Cachet
 
-Cachet PHP client.
+Cachet Api client.
 
 ## About Cachet
 
@@ -11,7 +11,7 @@ Cachet is an open source status page system written in PHP. https://github.com/C
 Setup
 
 ```php
-use Mangati\Cachet\Client;
+use Devoralive\Client;
 
 $endpoint = 'https://demo.cachethq.io/api/v1/';
 $token    = '9yMHsdioQosnyVK4iCVR';

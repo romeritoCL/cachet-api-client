@@ -12,14 +12,14 @@ class Point extends Entity
 {
     /**
      * @var int
-     * @JMS\Type("integer")
+     * @JMS\Type("int")
      * @JMS\SerializedName("metric_id")
      */
     private $metricId;
 
     /**
      * @var int
-     * @JMS\Type("integer")
+     * @JMS\Type("int")
      * @JMS\SerializedName("value")
      */
     private $value;

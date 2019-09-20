@@ -48,6 +48,8 @@ class ClientTest extends TestCase
         $result = $this->client->getIncidents();
         foreach ($result as $incident) {
             $this->assertInstanceOf(Incident::class, $incident);
+            $this->assertInstanceOf(\DateTime::class, $incident->getCreatedAt());
+            $this->assertInstanceOf(\DateTime::class, $incident->getUpdatedAt());
         }
     }
 }

@@ -37,14 +37,14 @@ class Metric extends Entity
 
     /**
      * @var int
-     * @JMS\Type("integer")
+     * @JMS\Type("int")
      * @JMS\SerializedName("calc_type")
      */
     private $calcType;
 
     /**
      * @var int
-     * @JMS\Type("integer")
+     * @JMS\Type("int")
      * @JMS\SerializedName("display_chart")
      */
     private $displayChart;

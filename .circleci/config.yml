@@ -10,13 +10,10 @@ jobs:
           command: curl -s https://getcomposer.org/installer | php-7.0
       - run:
           name: Install Vendors
-          command: php-7.3 composer.phar install
-      - run:
-          name: Testing PHP 7.0
-          command: php-7.0 ./vendor/bin/phpunit
-      - run:
-          name: Testing PHP 7.1
-          command: php-7.1 ./vendor/bin/phpunit
+          command: php-7.2 composer.phar install
       - run:
           name: Testing PHP 7.2
           command: php-7.2 ./vendor/bin/phpunit
+      - run:
+          name: Testing PHP 7.3
+          command: php-7.3 ./vendor/bin/phpunit

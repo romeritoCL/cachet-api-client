@@ -53,7 +53,7 @@ PHP Fatal error:  Uncaught exception 'Doctrine\Common\Annotations\AnnotationExce
 Can fix it registering the JMS namespace:
 
 ```php
-Doctrine\Common\Annotations\AnnotationRegistry::registerAutoloadNamespace('JMS\Serializer\Annotation', $rootDir . "/vendor/jms/serializer/src");
+Doctrine\Common\Annotations\AnnotationRegistry::registerLoader('class_exists');
 ```
 
 ### Components

@@ -22,53 +22,53 @@ class Incident extends Entity
      * @var string
      * @JMS\Type("string")
      */
-    private $name;
+    protected $name;
 
     /**
      * @var int
      * @JMS\Type("string")
      */
-    private $message;
+    protected $message;
 
     /**
      * @var int
      * @JMS\Type("int")
      * @JMS\SerializedName("component_id")
      */
-    private $component;
+    protected $component;
 
     /**
      * @var int
      * @JMS\Type("int")
      * @JMS\SerializedName("component_status")
      */
-    private $componentStatus;
+    protected $componentStatus;
 
     /**
      * @var int
      * @JMS\Type("int")
      */
-    private $status;
+    protected $status;
 
     /**
      * @var int
      * @JMS\Type("string")
      * @JMS\SerializedName("human_status")
      */
-    private $humanStatus;
+    protected $humanStatus;
 
     /**
      * @var int
      * @JMS\Type("int")
      */
-    private $visible;
+    protected $visible;
 
     /**
      * @var DateTime
      * @JMS\Type("DateTime<'Y-m-d H:i:s'>")
      * @JMS\SerializedName("scheduled_at")
      */
-    private $scheduledAt;
+    protected $scheduledAt;
 
     /**
      * Get the value of Name

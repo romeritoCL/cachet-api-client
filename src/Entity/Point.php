@@ -15,14 +15,14 @@ class Point extends Entity
      * @JMS\Type("int")
      * @JMS\SerializedName("metric_id")
      */
-    private $metricId;
+    protected $metricId;
 
     /**
      * @var int
      * @JMS\Type("int")
      * @JMS\SerializedName("value")
      */
-    private $value;
+    protected $value;
 
     /**
      * @return int

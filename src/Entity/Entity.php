@@ -9,34 +9,34 @@ use JMS\Serializer\Annotation as JMS;
  * Class Entity
  * @package DevoraliveCachet\Entity
  */
-abstract class Entity
+abstract class Entity implements \JsonSerializable
 {
     /**
      * @var int
      * @JMS\Type("int")
      */
-    private $id;
+    protected $id;
 
     /**
      * @var DateTime
      * @JMS\Type("DateTime<'Y-m-d H:i:s'>")
      * @JMS\SerializedName("created_at")
      */
-    private $createdAt;
+    protected $createdAt;
 
     /**
      * @var DateTime
      * @JMS\Type("DateTime<'Y-m-d H:i:s'>")
      * @JMS\SerializedName("updated_at")
      */
-    private $updatedAt;
+    protected $updatedAt;
 
     /**
      * @var DateTime
      * @JMS\Type("DateTime<'Y-m-d H:i:s'>")
      * @JMS\SerializedName("deleted_at")
      */
-    private $deletedAt;
+    protected $deletedAt;
 
 
     /**
@@ -133,5 +133,13 @@ abstract class Entity
         $this->deletedAt = $deletedAt;
 
         return $this;
+    }
+
+    /**
+     * @return array|mixed
+     */
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
     }
 }

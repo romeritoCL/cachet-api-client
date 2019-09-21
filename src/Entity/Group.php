@@ -14,19 +14,19 @@ class Group extends Entity
      * @var string
      * @JMS\Type("string")
      */
-    private $name;
+    protected $name;
 
     /**
      * @var int
      * @JMS\Type("int")
      */
-    private $order;
+    protected $order;
 
     /**
      * @var int
      * @JMS\Type("boolean")
      */
-    private $collapsed;
+    protected $collapsed;
 
     /**
      * Get the value of Name

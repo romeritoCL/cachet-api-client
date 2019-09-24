@@ -19,45 +19,45 @@ class Component extends Entity
      * @var string
      * @JMS\Type("string")
      */
-    private $name;
+    protected $name;
 
     /**
      * @var string
      * @JMS\Type("string")
      */
-    private $description;
+    protected $description;
 
     /**
      * @var string
      * @JMS\Type("string")
      */
-    private $link;
+    protected $link;
 
     /**
      * @var int
      * @JMS\Type("int")
      */
-    private $status;
+    protected $status;
 
     /**
      * @var int
      * @JMS\Type("int")
      */
-    private $order;
+    protected $order;
 
     /**
      * @var int
      * @JMS\Type("int")
      * @JMS\SerializedName("group_id")
      */
-    private $group;
+    protected $group;
 
     /**
      * @var string
      * @JMS\Type("string")
      * @JMS\SerializedName("status_name")
      */
-    private $statusName;
+    protected $statusName;
 
     public function __construct()
     {

@@ -43,6 +43,19 @@ $token    = '9yMHsdioQosnyVK4iCVR';
 $client = new Client($endpoint, $token);
 ```
 
+## StandAlone Errors
+Doctrine annotation error:
+
+```php
+PHP Fatal error:  Uncaught exception 'Doctrine\Common\Annotations\AnnotationException' with message '[Semantical Error] The annotation "@JMS\Serializer\Annotation\Type" in property (...) does not exist, or could not be auto-loaded.'
+```
+
+Can fix it registering the JMS namespace, locate your bootstrap.php file and add this line at the end:
+
+```php
+Doctrine\Common\Annotations\AnnotationRegistry::registerLoader('class_exists');
+```
+
 ### Components
 
 Get components

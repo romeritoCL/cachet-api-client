@@ -14,47 +14,47 @@ class Metric extends Entity
      * @var string
      * @JMS\Type("string")
      */
-    private $name;
+    protected $name;
 
     /**
      * @var string
      * @JMS\Type("string")
      */
-    private $suffix;
+    protected $suffix;
 
     /**
      * @var string
      * @JMS\Type("string")
      */
-    private $description;
+    protected $description;
 
     /**
      * @var string
      * @JMS\Type("string")
      * @JMS\SerializedName("default_value")
      */
-    private $defaultValue;
+    protected $defaultValue;
 
     /**
      * @var int
      * @JMS\Type("int")
      * @JMS\SerializedName("calc_type")
      */
-    private $calcType;
+    protected $calcType;
 
     /**
      * @var int
      * @JMS\Type("int")
      * @JMS\SerializedName("display_chart")
      */
-    private $displayChart;
+    protected $displayChart;
 
     /**
      * @var int
      * @JMS\Type("string")
      * @JMS\SerializedName("default_view_name")
      */
-    private $defaultViewName;
+    protected $defaultViewName;
 
     /**
      * @return string

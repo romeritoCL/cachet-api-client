@@ -15,14 +15,29 @@ class Point extends Entity
      * @JMS\Type("int")
      * @JMS\SerializedName("metric_id")
      */
-    private $metricId;
+    protected $metricId;
 
     /**
      * @var int
      * @JMS\Type("int")
      * @JMS\SerializedName("value")
      */
-    private $value;
+    protected $value;
+
+    /**
+     * @var int
+     * @JMS\Type("int")
+     * @JMS\SerializedName("timestamp")
+     */
+    protected $timestamp;
+
+    /**
+     * Point constructor.
+     */
+    public function __construct()
+    {
+        $this->timestamp = time();
+    }
 
     /**
      * @return int
@@ -62,5 +77,13 @@ class Point extends Entity
         $this->value = $value;
 
         return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTimestamp(): int
+    {
+        return $this->timestamp;
     }
 }

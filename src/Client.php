@@ -2,6 +2,8 @@
 
 namespace DevoraliveCachet;
 
+use DevoraliveCachet\Entity\Point;
+use DevoraliveCachet\Result\Point\PointEnvelope;
 use JMS\Serializer\SerializerBuilder;
 use DevoraliveCachet\Entity\Metric;
 use DevoraliveCachet\Result\Generic\StringEnvelope;
@@ -305,5 +307,19 @@ class Client
         $this->handler->delete('metrics/' . $id, $id);
 
         return true;
+    }
+
+    /**
+     * @param Metric $metric
+     * @param Point  $point
+     *
+     * @return mixed
+     * @throws GuzzleException
+     */
+    public function addMetricPoint(Metric $metric, Point $point)
+    {
+        $envelope = $this->handler->post('metrics/' . $metric->getId() . '/points', PointEnvelope::class, $point);
+
+        return $envelope->getData();
     }
 }
